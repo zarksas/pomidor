@@ -51,6 +51,10 @@ function createTodoList() {
     this.items.splice(index, 1);
  }
 
+ todoList.complete = function(index) {
+     this.items[index].completed = true;
+ }
+
 
 
 
