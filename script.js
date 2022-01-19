@@ -38,3 +38,7 @@ function createTodoList() {
  todoList.add = function(text) {
         this.items.unshift({text: text, completed: false})
  };
+
+ todoList.remove = function(index) {
+    this.items.splice(index, 1);
+ }
