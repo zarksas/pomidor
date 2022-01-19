@@ -42,3 +42,7 @@ function createTodoList() {
  todoList.remove = function(index) {
     this.items.splice(index, 1);
  }
+
+ todoList.print = function(index) {
+     console.log(this.items[index].text);
+ }
