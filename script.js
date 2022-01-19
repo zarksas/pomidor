@@ -18,7 +18,7 @@ function createTodoList() {
           completed: true
         },
       ],
-  
+      
   
     }
   
@@ -27,9 +27,17 @@ function createTodoList() {
   
   const todoList = createTodoList();
 
+  todoList.print = function(index) {
+    if (this.items[index].completed) {
+    console.log(`[x] ${this.items[index].text}`);
+    } else {
+   console.log(`[ ] ${this.items[index].text}`)   
+    }
+}
+
   todoList.printAll = function() {
       for (let i = 0; i < this.items.length; i++) {
-          console.log(this.items[i].text)
+        todoList.print(i)
       }
   }
 
@@ -43,11 +51,6 @@ function createTodoList() {
     this.items.splice(index, 1);
  }
 
- todoList.print = function(index) {
-     if (this.items[index].completed) {
-     console.log(`[x] ${this.items[index].text}`);
-     } else {
-    console.log(`[ ] ${this.items[index].text}`)   
-     }
- }
+
+
 
