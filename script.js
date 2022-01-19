@@ -33,4 +33,8 @@ function createTodoList() {
       }
   }
 
- todoList.printAll()
+ todoList.printAll();
+
+ todoList.add = function(text) {
+        this.items.unshift({text: text, completed: false})
+ };
