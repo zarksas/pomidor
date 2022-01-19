@@ -44,5 +44,10 @@ function createTodoList() {
  }
 
  todoList.print = function(index) {
-     console.log(this.items[index].text);
+     if (this.items[index].completed) {
+     console.log(`[x] ${this.items[index].text}`);
+     } else {
+    console.log(`[ ] ${this.items[index].text}`)   
+     }
  }
+
